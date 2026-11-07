@@ -11,3 +11,11 @@
   <span>Porções: {{ servings() }}</span>
   <button (click)="increaseServings()">+</button>
 </div>
+
+<div>
+  <h3>Ingrediente em destaque:</h3>
+  <p>
+    {{ adjustedIngredients()[0].name }}: {{ adjustedIngredients()[0].quantity }}
+    {{ adjustedIngredients()[0].unit }}
+  </p>
+</div>
