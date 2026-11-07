@@ -4,6 +4,7 @@
 <button (click)="selectRecipe(recipes[1])">Ver Salada</button>
 
 <h2>{{ selectedRecipe().name }}</h2>
+<img [src]="selectedRecipe().imgUrl" [alt]="selectedRecipe().name" width="300" />
 <p>{{ selectedRecipe().description }}</p>
 
 <div>
