@@ -9,4 +9,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Recipe Box');
+
+  protected logRecipe(name: string): void {
+    console.log('Receita selecionada:', name);
+  }
 }
