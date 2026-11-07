@@ -1,17 +1,19 @@
-<h2>{{ recipe().name }}</h2>
-<img [src]="recipe().imgUrl" [alt]="recipe().name" width="300" />
-<p>{{ recipe().description }}</p>
+<div class="recipe-card">
+  <h2 class="recipe-title">{{ recipe().name }}</h2>
+  <img class="recipe-image" [src]="recipe().imgUrl" [alt]="recipe().name" />
+  <p class="recipe-desc">{{ recipe().description }}</p>
 
-<div>
-  <button (click)="decreaseServings()">-</button>
-  <span>Porções: {{ servings() }}</span>
-  <button (click)="increaseServings()">+</button>
-</div>
+  <div class="servings-control">
+    <button (click)="decreaseServings()">-</button>
+    <span>Porções: {{ servings() }}</span>
+    <button (click)="increaseServings()">+</button>
+  </div>
 
-<div>
-  <h3>Ingrediente em destaque:</h3>
-  <p>
-    {{ adjustedIngredients()[0].name }}: {{ adjustedIngredients()[0].quantity }}
-    {{ adjustedIngredients()[0].unit }}
-  </p>
+  <div class="ingredient-box">
+    <h3>Ingrediente em destaque:</h3>
+    <p>
+      {{ adjustedIngredients()[0].name }}: {{ adjustedIngredients()[0].quantity }}
+      {{ adjustedIngredients()[0].unit }}
+    </p>
+  </div>
 </div>
