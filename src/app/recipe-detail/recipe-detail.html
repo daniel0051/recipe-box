@@ -1,5 +1,10 @@
 <div class="recipe-card">
-  <h2 class="recipe-title">{{ recipe().name }}</h2>
+  <h2 class="recipe-title">
+    {{ recipe().name }}
+    @if (recipe().isFavorite) {
+      <span>⭐ Favorita</span>
+    }
+  </h2>
   <img class="recipe-image" [src]="recipe().imgUrl" [alt]="recipe().name" />
   <p class="recipe-desc">{{ recipe().description }}</p>
 

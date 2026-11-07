@@ -10,5 +10,6 @@ export interface RecipeModel {
   description: string;
   servings: number;
   imgUrl: string;
+  isFavorite: boolean;
   ingredients: Ingredient[];
 }
