@@ -11,9 +11,13 @@
 
   <div class="ingredient-box">
     <h3>Ingrediente em destaque:</h3>
-    <p>
-      {{ adjustedIngredients()[0].name }}: {{ adjustedIngredients()[0].quantity }}
-      {{ adjustedIngredients()[0].unit }}
-    </p>
+    <ul>
+      @for (ingredient of adjustedIngredients(); track ingredient.name) {
+        <li>
+          <strong>{{ ingredient.name }}</strong
+          >: {{ ingredient.quantity }} {{ ingredient.unit }}
+        </li>
+      }
+    </ul>
   </div>
 </div>
