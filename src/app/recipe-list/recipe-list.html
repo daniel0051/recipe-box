@@ -1,22 +1,4 @@
-<h1>My {{ title() }}</h1>
-
 <button (click)="selectRecipe(recipes[0])">Ver Spaghetti</button>
 <button (click)="selectRecipe(recipes[1])">Ver Salada</button>
 
-<h2>{{ selectedRecipe().name }}</h2>
-<img [src]="selectedRecipe().imgUrl" [alt]="selectedRecipe().name" width="300" />
-<p>{{ selectedRecipe().description }}</p>
-
-<div>
-  <button (click)="decreaseServings()">-</button>
-  <span>Porções: {{ servings() }}</span>
-  <button (click)="increaseServings()">+</button>
-</div>
-
-<div>
-  <h3>Ingrediente em destaque:</h3>
-  <p>
-    {{ adjustedIngredients()[0].name }}: {{ adjustedIngredients()[0].quantity }}
-    {{ adjustedIngredients()[0].unit }}
-  </p>
-</div>
+<app-recipe-detail [recipe]="selectedRecipe()"></app-recipe-detail>
